@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^4.41.1",
+    "@opentelemetry/api": "^1.6.0",
+    "contentlayer": "^0.3.4",
+    "date-fns": "^2.30.0",
     "next": "13.5.4",
+    "next-contentlayer": "^0.3.4",
     "react": "^18",
     "react-dom": "^18"
   },
