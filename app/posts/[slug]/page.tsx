@@ -1,6 +1,7 @@
 import { allPosts } from "contentlayer/generated";
 import { getMDXComponent } from "next-contentlayer/hooks";
 import { format, parseISO } from "date-fns";
+import CodeSnippet from "@/app/components/CodeSnippet";
 
 export const generateStaticParams = async () =>
   allPosts.map((post: any) => ({ slug: post._raw.flattenedPath }));
@@ -27,7 +28,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
       <h1>{post.title}</h1>
       <p>{format(parseISO(post.date), "LLLL d, yyyy")}</p>
       <article>
-        <MDXContent />
+        <MDXContent components={{CodeSnippet}} />
       </article>
     </div>
   );
