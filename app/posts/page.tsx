@@ -1,7 +1,7 @@
 import React from "react";
 import { allPosts, Post } from "@/.contentlayer/generated";
-import PostCard from "../components/PostCard";
 import { compareDesc } from "date-fns";
+import PostList from "../components/PostList";
 
 const page = (post: Post) => {
   const posts = allPosts.sort((a, b) =>
@@ -10,10 +10,10 @@ const page = (post: Post) => {
 
   return (
     <>
-      <div className="grid md:grid-cols-2">
+      <div className="">
         {posts.map((post, idx) => (
           <div className="">
-            <PostCard key="idx" {...post} />
+            <PostList key="idx" {...post} />
           </div>
         ))}
       </div>

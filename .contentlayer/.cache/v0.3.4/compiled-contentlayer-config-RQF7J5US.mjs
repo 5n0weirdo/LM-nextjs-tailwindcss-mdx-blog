@@ -1,12 +1,11 @@
+// contentlayer.config.ts
 import {
   defineDocumentType,
-  makeSource,
-  ComputedFields,
+  makeSource
 } from "contentlayer/source-files";
 import rehypePrettyCode from "rehype-pretty-code";
 import { remarkCodeTitles } from "pliny/mdx-plugins/index.js";
-
-const Post = defineDocumentType(() => ({
+var Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `**/*.mdx`,
   contentType: "mdx",
@@ -14,56 +13,57 @@ const Post = defineDocumentType(() => ({
     title: {
       type: "string",
       description: "The title of the post",
-      required: true,
+      required: true
     },
     date: {
       type: "date",
       description: "The date of the post",
-      required: true,
+      required: true
     },
     description: {
       type: "string",
       description: "The desription of the post",
-      required: true,
+      required: true
     },
     banner: {
       type: "string",
       description: "The banner of the post",
-      required: true,
-    },
+      required: true
+    }
   },
   computedFields: {
     url: {
       type: "string",
-      resolve: (doc) => `/posts/${doc._raw.flattenedPath}`,
-    },
-   
-  },
+      resolve: (doc) => `/posts/${doc._raw.flattenedPath}`
+    }
+  }
 }));
-
-const rehypeoptions = {
+var rehypeoptions = {
   // Use one of Shiki's packaged themes
   theme: "dracula",
   // Set to true to keep the background color
   keepBackground: true,
-  onVisitLine(node: any) {
+  onVisitLine(node) {
     if (node.children.length === 0) {
       node.children = [{ type: "text", value: " " }];
     }
   },
-  onVisitHighlightedLine(node: any) {
+  onVisitHighlightedLine(node) {
     node.properties.className.push("highlighted");
   },
-  onVisitHighlightedWord(node: any, id: any) {
+  onVisitHighlightedWord(node, id) {
     node.properties.className = ["word"];
-  },
+  }
 };
-
-export default makeSource({
+var contentlayer_config_default = makeSource({
   contentDirPath: "content/posts",
   documentTypes: [Post],
   mdx: {
     remarkPlugins: [remarkCodeTitles],
-    rehypePlugins: [[rehypePrettyCode, rehypeoptions]],
-  },
+    rehypePlugins: [[rehypePrettyCode, rehypeoptions]]
+  }
 });
+export {
+  contentlayer_config_default as default
+};
+//# sourceMappingURL=compiled-contentlayer-config-RQF7J5US.mjs.map

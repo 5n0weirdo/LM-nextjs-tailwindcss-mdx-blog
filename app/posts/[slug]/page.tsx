@@ -4,7 +4,6 @@ import { format, parseISO } from "date-fns";
 import { components } from "@/app/components/mdx/MDXComponents";
 import { MDXLayoutRenderer } from "@/app/components/mdx/MDXLayoutRenderer";
 
-
 export const generateStaticParams = async () =>
   allPosts.map((post: any) => ({ slug: post._raw.flattenedPath }));
 export const generateMetadata = ({ params }: any) => {
@@ -14,7 +13,7 @@ export const generateMetadata = ({ params }: any) => {
   return { title: post?.title, description: post?.description };
 };
 
-const PostLayout = ({ params }: { params: { slug: string} }) => {
+const PostLayout = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
 
   // const components = {
@@ -29,7 +28,6 @@ const PostLayout = ({ params }: { params: { slug: string} }) => {
   } else {
     MDXContent = getMDXComponent(post!.body.code);
   }
- 
 
   return (
     <div>
@@ -37,7 +35,8 @@ const PostLayout = ({ params }: { params: { slug: string} }) => {
       <p>{format(parseISO(post.date), "LLLL d, yyyy")}</p>
       <article>
         {/* <MDXContent components={{ ...components }} /> */}
-        <MDXLayoutRenderer code={post.body.code} components={components}/> </article>
+        <MDXLayoutRenderer code={post.body.code} components={components} />{" "}
+      </article>
     </div>
   );
 };

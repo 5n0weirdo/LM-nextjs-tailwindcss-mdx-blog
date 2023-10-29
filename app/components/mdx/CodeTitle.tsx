@@ -25,7 +25,7 @@ export default function CodeTitle({ title, lang }: Props) {
   switch (lang) {
     case "html":
       Icon = SiHtml5;
-      iconColor = "text-orange-500"
+      iconColor = "text-orange-500";
       break;
     case "css":
       Icon = SiCss3;
@@ -80,8 +80,8 @@ export default function CodeTitle({ title, lang }: Props) {
       break;
   }
   return (
-    <div className="relative !z-10"> 
- <div className=" bg-slate-800 text-white rounded-t-xl p-3  flex items-center justify-between font-mono !mt-4 ">
+    <div className="relative !z-10">
+      <div className=" bg-slate-800 text-white rounded-t-xl p-3  flex items-center justify-between font-mono !mt-4 ">
         <div className="flex items-center gap-2">
           <Icon className={`flex items-center w-4 h-4 ${iconColor}`} />
           <p className="!my-0 font-[500] text-sm">{title || lang}</p>

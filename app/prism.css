@@ -5,10 +5,8 @@
  * https://github.com/PrismJS/prism-themes
  */
 
-
- 
 pre {
-  @apply bg-slate-900 text-sm overflow-auto px-6 py-7 rounded-b-xl
+  @apply bg-slate-900 text-sm overflow-auto px-6 py-7 rounded-b-xl;
 }
 
 /* Code title styles */

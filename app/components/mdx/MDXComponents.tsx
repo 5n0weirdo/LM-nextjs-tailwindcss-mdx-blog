@@ -6,5 +6,4 @@ export const components: any = {
   pre: Pre,
   CodeSnippet,
   CodeTitle,
-
 };
