@@ -15,12 +15,6 @@ export const generateMetadata = ({ params }: any) => {
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
-
-  // const components = {
-  // pre: Pre,
-  // CodeSnippet: CodeSnippet,
-  // CopyButton: CopyButton,
-  // };
   let MDXContent;
 
   if (!post) {
@@ -34,7 +28,6 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
       <h1>{post.title}</h1>
       <p>{format(parseISO(post.date), "LLLL d, yyyy")}</p>
       <article>
-        {/* <MDXContent components={{ ...components }} /> */}
         <MDXLayoutRenderer code={post.body.code} components={components} />{" "}
       </article>
     </div>

@@ -23,6 +23,7 @@
     "headings-resolver": "link:@/plugin/headings-resolver",
     "next": "13.5.4",
     "next-contentlayer": "^0.3.4",
+    "next-themes": "^0.2.1",
     "pliny": "^0.1.5",
     "react": "^18",
     "react-dom": "^18",

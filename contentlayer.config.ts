@@ -1,7 +1,6 @@
 import {
   defineDocumentType,
   makeSource,
-  ComputedFields,
 } from "contentlayer/source-files";
 import rehypePrettyCode from "rehype-pretty-code";
 import { remarkCodeTitles } from "pliny/mdx-plugins/index.js";
@@ -43,7 +42,7 @@ const Post = defineDocumentType(() => ({
 
 const rehypeoptions = {
   // Use one of Shiki's packaged themes
-  theme: "dracula",
+  theme: "github-dark",
   // Set to true to keep the background color
   keepBackground: true,
   onVisitLine(node: any) {

@@ -40,7 +40,7 @@ var Post = defineDocumentType(() => ({
 }));
 var rehypeoptions = {
   // Use one of Shiki's packaged themes
-  theme: "dracula",
+  theme: "github-dark",
   // Set to true to keep the background color
   keepBackground: true,
   onVisitLine(node) {
@@ -66,4 +66,4 @@ var contentlayer_config_default = makeSource({
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-RQF7J5US.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-ACH57CX7.mjs.map
