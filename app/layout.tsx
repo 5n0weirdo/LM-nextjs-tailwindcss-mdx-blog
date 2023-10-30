@@ -1,3 +1,4 @@
+import { ThemeProviders } from "./components/ThemeProvider";
 import "./globals.css";
 import "./prism.css";
 import type { Metadata } from "next";
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-white dark:bg-primary ${inter.className}`}>
+      <ThemeProviders>
         <div className="m-10">{children}</div>
+      </ThemeProviders>
       </body>
     </html>
   );

@@ -1,8 +1,5 @@
 // contentlayer.config.ts
-import {
-  defineDocumentType,
-  makeSource
-} from "contentlayer/source-files";
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import rehypePrettyCode from "rehype-pretty-code";
 import { remarkCodeTitles } from "pliny/mdx-plugins/index.js";
 var Post = defineDocumentType(() => ({
@@ -42,7 +39,7 @@ var rehypeoptions = {
   // Use one of Shiki's packaged themes
   theme: "github-dark",
   // Set to true to keep the background color
-  keepBackground: true,
+  keepBackground: false,
   onVisitLine(node) {
     if (node.children.length === 0) {
       node.children = [{ type: "text", value: " " }];
@@ -66,4 +63,4 @@ var contentlayer_config_default = makeSource({
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-ACH57CX7.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-WLDXAA2F.mjs.map

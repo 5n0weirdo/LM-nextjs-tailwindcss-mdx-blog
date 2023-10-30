@@ -38,6 +38,12 @@ dependencies:
   github-slugger:
     specifier: ^2.0.0
     version: 2.0.0
+  hast:
+    specifier: ^1.0.0
+    version: 1.0.0
+  hastscript:
+    specifier: ^8.0.0
+    version: 8.0.0
   headings-resolver:
     specifier: link:@/plugin/headings-resolver
     version: link:@/plugin/headings-resolver
@@ -98,6 +104,9 @@ dependencies:
   tailwind-merge:
     specifier: ^1.14.0
     version: 1.14.0
+  unist-util-visit:
+    specifier: ^5.0.0
+    version: 5.0.0
 
 devDependencies:
   '@types/node':
@@ -1867,7 +1876,7 @@ packages:
   /@types/hast@3.0.2:
     resolution: {integrity: sha512-B5hZHgHsXvfCoO3xgNJvBnX7N8p86TqQeGKXcokW4XXi+qY4vxxPSFYofytvVmpFxzPv7oxDQzjg5Un5m2/xiw==}
     dependencies:
-      '@types/unist': 2.0.9
+      '@types/unist': 3.0.1
     dev: false
 
   /@types/katex@0.16.5:
@@ -1883,7 +1892,7 @@ packages:
   /@types/mdast@4.0.2:
     resolution: {integrity: sha512-tYR83EignvhYO9iU3kDg8V28M0jqyh9zzp5GV+EO+AYnyUl3P5ltkTeJuTiFZQFz670FSb3EwT/6LQdX+UdKfw==}
     dependencies:
-      '@types/unist': 2.0.9
+      '@types/unist': 3.0.1
     dev: false
 
   /@types/mdx@2.0.9:
@@ -3309,6 +3318,11 @@ packages:
     resolution: {integrity: sha512-88JUN06ipLwsnv+dVn+OIYOvAuvBMy/Qoi6O7mQHxdPXpjy+Cd6xRkWwux7DKO+4sYILtLBRIKgsdpS2gQc7qw==}
     dependencies:
       '@types/hast': 3.0.2
+    dev: false
+
+  /hast@1.0.0:
+    resolution: {integrity: sha512-vFUqlRV5C+xqP76Wwq2SrM0kipnmpxJm7OfvVXpB35Fp+Fn4MV+ozr+JZr5qFvyR1q/U+Foim2x+3P+x9S1PLA==}
+    deprecated: Renamed to rehype
     dev: false
 
   /hastscript@7.2.0:

@@ -20,6 +20,8 @@
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.4",
     "github-slugger": "^2.0.0",
+    "hast": "^1.0.0",
+    "hastscript": "^8.0.0",
     "headings-resolver": "link:@/plugin/headings-resolver",
     "next": "13.5.4",
     "next-contentlayer": "^0.3.4",
@@ -39,7 +41,8 @@
     "remark-gfm": "^4.0.0",
     "remark-math": "^6.0.0",
     "shiki": "^0.14.5",
-    "tailwind-merge": "^1.14.0"
+    "tailwind-merge": "^1.14.0",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",

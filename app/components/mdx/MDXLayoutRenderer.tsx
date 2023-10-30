@@ -2,11 +2,10 @@
 import React from "react";
 import * as _jsx_runtime from "react/jsx-runtime";
 import ReactDOM from "react-dom";
-import type { MDXComponents } from "mdx/types";
 
 export interface MDXLayoutRenderer {
   code: string;
-  components?: MDXComponents;
+  components?: any;
   [key: string]: unknown;
 }
 
