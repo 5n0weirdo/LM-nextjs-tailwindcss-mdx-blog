@@ -16,7 +16,6 @@ const page = () => {
   return (
     <>
       <div className="">
-        <ThemeSwitch />
         <PageTitle>Posts</PageTitle>
         {posts.map((post, idx) => (
           <div className="">

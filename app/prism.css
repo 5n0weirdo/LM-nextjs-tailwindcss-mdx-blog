@@ -6,7 +6,8 @@
  */
 
 pre {
-  @apply text-sm bg-gray-900 overflow-auto px-6 py-7 rounded-b-xl max-w-xl;
+  @apply text-sm bg-gray-900 overflow-auto px-6 py-7 rounded-b-xl;
+  /* @apply text-sm bg-gray-900 overflow-auto px-6 py-7 rounded-b-xl max-w-xl; */
 }
 
 /* Code title styles */

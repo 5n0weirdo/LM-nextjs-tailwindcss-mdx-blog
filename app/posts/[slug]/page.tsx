@@ -26,7 +26,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   return (
     <div>
       <Header {...post}/>
-      <article>
+      <article >
         <MDXLayoutRenderer code={post.body.code} components={components} />{" "}
       </article>
     </div>

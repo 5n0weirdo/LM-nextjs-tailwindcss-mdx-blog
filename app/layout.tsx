@@ -1,6 +1,8 @@
+import Navbar from "./components/Navbar";
 import { ThemeProviders } from "./components/ThemeProvider";
 import "./globals.css";
 import "./prism.css";
+// import "./pre.css"
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -20,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`bg-white dark:bg-primary ${inter.className}`}>
       <ThemeProviders>
+        <Navbar/>
         <div className="m-16">{children}</div>
       </ThemeProviders>
       </body>
